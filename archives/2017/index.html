@@ -1,214 +1,281 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   
-  <title>Archives: 2017 | Tamer&#39;home</title>
-  <meta name="description" content="A minimal hexo theme." />
-  <meta name="keywords" content="hexo,theme,typescript,otakism,otaku" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="The most important person is happy!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tamer&#39;home">
-<meta property="og:url" content="https://liutoto.github.io/tamer.github.io/archives/2017/index.html">
-<meta property="og:site_name" content="Tamer&#39;home">
-<meta property="og:description" content="The most important person is happy!">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tamer&#39;home">
-<meta name="twitter:description" content="The most important person is happy!">
+  <meta name="keywords" content="tamer">
+  <meta name="description" content="tamer&#39;blog">
+  
+  <title>Tamer&#39;home</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/materialize.min.css">
+    
+      <link rel="stylesheet" href="/css/nprogress.min.css">
+    
+      <link rel="stylesheet" href="/css/Vateral.min.css">
+    
   
   
-    <link rel="icon" href="/favicon.png">
-  
-
-	<script src="https://use.typekit.net/eyf3hir.js"></script>
-  <script>try{Typekit.load({ async: false });}catch(e){}</script>
-  <link rel="stylesheet" href="/style.css">
-  <script>
-    function setLoadingBarProgress(num) {
-      document.getElementById('loading-bar').style.width=num+"%";
-    }
-  </script>
-  
-
 </head>
-
 <body>
-  
-  <div id="loading-bar-wrapper">
-  <div id="loading-bar"></div>
+<a href="#" data-activates="slide-out"  class="button-collapse"><div class="nav-btn"><i class="material-icons">list</i></div></a>
+<div id="menu-outer">
+  <div id="menu-inner">
+      <ul id="slide-out" class="side-nav" >
+    <div class="nav-header"  style="background-image: url(/images/header-bg.png)">
+    <div class="header-box"><img src="/images/header.jpg" ondragstart="return false;"></div>
+    <p>Tamer</p>
+    <div class="nav-link">
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box twitter"></div></a>
+        
+        
+        <a  href="http://example.com" target="_blank"><div class="link-box github"></div></a>
+        
+        
+        <a href="mailto:http://example.com"><div class="link-box email"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"><div class="link-box weibo"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box zhihu"></div></a>
+        
+    </div>
+    <div class="nav-search">
+        <form id="search-form"> <!-- 搜索框相关 -->
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off"/>
+            <div class="nav-search-img"><i class="material-icons">search</i></div>
+        </form>
+        <div id="local-search-result"></div> <!-- 搜索结果区 -->
+        <p class='no-result'>无搜索结果</p>
+    </div>
+</div>
+    <!--Homepage-->
+
+<li class="nav-list">
+    <a href="/" target="_self">
+        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
+    </a>
+</li>
+
+<!--archives-->
+
+<li class="nav-list dropdown-btn">
+    <a  class=""  target="_self">
+        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        <a class="archive-link" href="/archives/2017/06/">六月 2017<span class="archive-count">1</span></a>
+    </li>
+</ul>
+<!--categories-->
+
+<li class="nav-list dropdown-btn">
+    <a   class=""  target="_self">
+        <div class="nav-ico"><i class="material-icons">dashboard</i></div><p>分类</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        
+    </li>
+</ul>
+<!--tags-->
+
+<li class="nav-list">
+    <a href="/archives" target="_self">
+        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
+    </a>
+</li>
+
+<!--photo-->
+
+<!--friends-->
+
+<!--about-->
+
+
+</ul>
+
+  </div>
 </div>
 
-  <script>setLoadingBarProgress(20)</script>
+<div id="content-outer">
+  <div id="content-inner">
+    
+
+
+<div class="tags">
   
-  <div id="site-wrapper">
-    
-    <header id="header">
-	<div id="header-wrapper" class="clearfix">
-		<a id="logo" href="/">
-			<img src="/images/logo.png" />
-			<span id="site-desc">
-			  otaku keeps alive
-      </span>
-		</a>
-		<button id="site-nav-switch">
-	    <span class="icon icon-menu"></span>
-	  </button>
-	</div>
-	<aside id="site-menu">
-  	<nav>
-  		
-        <a href="/" class="nav-home nav">
-          Home
-        </a>
-      
-        <a href="/about" class="nav-about nav">
-          About
-        </a>
-      
-        <a href="/archives" class="nav-archives nav">
-          Archives
-        </a>
-      
-    </nav>
-	</aside>
-</header>
-    <script>setLoadingBarProgress(40);</script>
-    
-    <main id="main" role="main">
-      
-	
+</div>
 
-
-	<section class="page-header archive">
-    <h1>- <span>2017</span> -</h1>
-  </section>
-
-
-
-
-<section class="post-list">
-	
-    <article class="post ">
-
+<div id="recent-posts">
   
-  <h2 class="title">
-    <a href="/2017/06/05/hello-world/">
-      Hello World
-    </a>
-  </h2>
+      <div class="recent-post-item lazy"  data-original="/images/random/vateral-12.png"  >
+        <a class="recent-post-link" href="/2017/06/05/hello-world/">
+        <div class="post-hover">
+          <!--title-->
+          <p class="post-title"><a href="/2017/06/05/hello-world/" >Hello World</a></p>
+
+          <!--date-->
+          
+            <p class="post-time">Tamer &nbsp &nbsp 发布于:<time datetime="2017-06-05T04:05:38.000Z">
+              2017-06-05
+            </time>
+            </p>
+          
+
+          <!--tags-->
+
+          标签:
+            
+            暂无标签
+            
+          <!--分类-->
+
+          分类:
+            
+            暂无分类
+            
+
+          <!--excerpt-->
+          <div class="post-excerpt">
+            <p>
+              摘要：
+              
+                Welcome to Hexo
+              
+            </p>
+          </div>
+          <div class="post-more"><a href="/2017/06/05/hello-world/" >全文阅读</a></div>
+        </div>
+        </a>
+      </div>
   
-  <time>
-    6月 5, 2017
-  </time>
-  <section class="content">
-	  <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-
-    
-    
-    
-
-  </section>
-</article>
-  
-</section>
+  <nav class="paging">
+    <span class="page-number current">1</span>
+</nav>
+</div>
 
 
 
-      <script>setLoadingBarProgress(60);</script>
-    </main>
-    
-    <footer id="footer" class="clearfix">
-  
-  
-	<div class="search">
-	  <form name="searchform" id="searchform" class="u-search-form">
-	    <input type="text" id="searchinput" class="u-search-input" placeholder="Looking for something?" />
-	    <button type="submit" id="u-search-btn-submit" class="u-search-btn-submit">
-	      <span class="icon icon-search"></span>
-	    </button>
-	  </form>
-	</div>
-	
 
-	<div class="social-wrapper">
-  	
-      
-        <a href="https://github.com/artchen" class="social github"
-          target="_blank" rel="external">
-          <span class="icon icon-github"></span>
-        </a>
-      
-        <a href="https://twitter.com/otakism" class="social twitter"
-          target="_blank" rel="external">
-          <span class="icon icon-twitter"></span>
-        </a>
-      
-        <a href="/atom.xml" class="social rss"
-          target="_blank" rel="external">
-          <span class="icon icon-rss"></span>
-        </a>
-      
-        <a href="https://plus.google.com/+ArtChenOtakism/posts" class="social google"
-          target="_blank" rel="external">
-          <span class="icon icon-google"></span>
-        </a>
-      
-        <a href="http://weibo.com/otakism/" class="social sina-weibo"
-          target="_blank" rel="external">
-          <span class="icon icon-sina-weibo"></span>
-        </a>
-      
-    
+
   </div>
-  
-  <div>Theme <span class="codename">Typescript</span> designed by <a href="http://rakugaki.me/" target="_blank">Art Chen</a>.</div>
-  <div>&copy; <a href="/">Tamer&#39;home</a></div>
-  
-</footer>
+</div>
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a  id="top-button" onfocus="this.blur();"><div class="up upinbody"><i class="material-icons material-up">vertical_align_top</i></div></a>
 
 
-    <script>setLoadingBarProgress(80);</script>
-    
-  </div>
-
-  
-
-
-
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>
-
-<script src="/js/jquery.fitvids.js"></script>
+<p >Copyright ©  2017  Tamer&#39;home</p>
+<p >Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> & Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
+<p style="font-size: 10px" id="footer-times" data-time="1/1/2017 00:00:00"></p>
 <script>
-	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
-	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
-	var ALGOLIA_API_KEY = "";
-	var ALGOLIA_APP_ID = "";
-	var ALGOLIA_INDEX_NAME = "";
-  var AZURE_SERVICE_NAME = "";
-  var AZURE_INDEX_NAME = "";
-  var AZURE_QUERY_KEY = "";
-  var BAIDU_API_ID = "";
-  var SEARCH_SERVICE = "google";
+    var beginTime=document.getElementById("footer-times").dataset.time
+    function show_date_time(){
+        var span=document.getElementById("footer-times")
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date(beginTime);//初始日期
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=Math.floor(e_hrsold);
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=Math.floor((e_hrsold-hrsold)*60);
+        seconds=Math.floor((e_minsold-minsold)*60);
+        span.innerHTML="本站已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+    }
+    show_date_time();
 </script>
-<script src="/js/search.js"></script>
-<script src="/js/app.js"></script>
+
+  </div>
+</div>
+
+<!--影集界面需要的资源-->
 
 
-  <script>setLoadingBarProgress(100);</script>
-  
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/materialize.min.js"></script>
+
+<script src="/js/jquery.pjax.min.js"></script>
+
+<script src="/js/nprogress.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+
+
+<script>
+    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000})
+    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
+     .on('pjax:end', function() {
+         dowmdiv();
+         $(".lazy").lazyload({
+             effect : "fadeIn"
+         });
+         $(".post-back").click(function () {
+             window.history.back();
+         });
+         var $root = $('html, body');
+         $('.post-toc-link').click(function() {
+             $root.animate({
+                 scrollTop: $( $.attr(this, 'href') ).offset().top
+             }, 500);
+             return false;
+         });
+         $(".post-toc-btn").click(function () {
+             if($(".post-toc").exist()){
+                 $(".post-toc-box").fadeToggle()
+             }else {
+                 $(".post-toc-none").fadeToggle()
+             }
+         })
+         var links=$(".post-author-link");
+         var button=$(".post-author-button");
+         button.click(function (){
+             if(links.css("display")=== "none"){
+                 links.css({
+                     "display":"block"
+                 }).animate({
+                     "right":"60px",
+                     "opacity":1
+                 },500)
+             }else {
+                 links.animate({
+                     "opacity":0
+                 },500)
+                 setTimeout(function (){
+
+                     links.css({
+                         "display":"none",
+                         "right":"100px"
+                     })
+                 },500)
+             }
+         })
+     })
+</script>
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 </body>
 </html>
