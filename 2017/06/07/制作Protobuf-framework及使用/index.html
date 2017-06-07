@@ -64,7 +64,7 @@
 
 <ul class="dropdown-menu dropdown" >
     <li class="nav-dropdown-list">
-        <a class="archive-link" href="/archives/2017/06/">六月 2017<span class="archive-count">2</span></a>
+        <a class="archive-link" href="/archives/2017/06/">六月 2017<span class="archive-count">3</span></a>
     </li>
 </ul>
 <!--categories-->
@@ -77,7 +77,7 @@
 
 <ul class="dropdown-menu dropdown" >
     <li class="nav-dropdown-list">
-        <a class="category-link" href="/categories/Other/">Other<span class="category-count">1</span></a></li><li class="nav-dropdown-list"><a class="category-link" href="/categories/iOS/">iOS<span class="category-count">1</span></a>
+        <a class="category-link" href="/categories/Other/">Other<span class="category-count">1</span></a></li><li class="nav-dropdown-list"><a class="category-link" href="/categories/iOS/">iOS<span class="category-count">2</span></a>
     </li>
 </ul>
 <!--tags-->
@@ -103,29 +103,47 @@
 <div id="content-outer">
   <div id="content-inner">
     <article id="post">
-  <div class="post-page-title" style="background-image:url(https://liutoto.github.io/tamer.github.io/images/random/yasuo_5.png)" >
-  <h2>tamer 第一个博客</h2>
+  <div class="post-page-title" style="background-image:url(https://liutoto.github.io/tamer.github.io/images/random/yasuo_2.png)" >
+  <h2>制作Protobuf framework及使用</h2>
     
-  <p>作者:Tamer &nbsp&nbsp 发布于:<time datetime="2017-06-05T09:30:22.000Z">
-          2017-06-05
+  <p>作者:Tamer &nbsp&nbsp 发布于:<time datetime="2017-06-07T03:37:07.000Z">
+          2017-06-07
     </time>
   </p>
     
   </div>
   <div class="post-page-content">
-  <p>Welcome to Tamer‘home!</p>
-<pre><code> 今天，之前的blog正式弃用了。
+  <ol>
+<li>下载 <a href="https://github.com/google/protobuf" target="_blank" rel="external">https://github.com/google/protobuf</a></li>
+<li>安装protoc<br> 2.1 objectivec/DevTools/full_mac_build.sh<br> 2.2 make<br> 2.3 make install<br> Note:  问题-&gt; 缺少autoconf等，<pre><code>1.下载homebrew: 
+    1.1 sudo su\ncurl -L http://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C /usr/local                
+    1.2 usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
+2.安装 autoconf等
+    2.1 brew install autoconf
+    2.2 brew install libtool
+    2.3 brew install automake
+</code></pre></li>
+<li>Xcode创建framework<br> 3.1 XCode创建framework工程。命名为Protobuf<br> note：后续添加的文件中引用都文件都是<protobuf xxx.xxx.h="">,不更改引用的情况下，建议还是以Protobuf命名。<br> 3.2 引入文件<br> 所有文件都在objectivec文件路径下。</protobuf></li>
+<li><p>配置Protobuf工程设置<br> 4.1 设置文件为MRC，两种方式分别为：</p>
+<pre><code>4.1.1 Build Setting-&gt;Objective-C Automatic Reference Counting 为No
+4.1.2 Build Phases-&gt;Compile Sources 下对应文件设置为-fno-objc-arc
+</code></pre><p> 4.2 设置文件搜索路径</p>
+<pre><code>4.2.1 Build Setting-&gt;Header Search Paths 添加$(SRCROOT)、$(SRCROOT)/Protobuf、
+        $(SRCROOT)/google、$(SRCROOT)/google/protobuf等
+</code></pre><p> 4.3 在源文件GPBBootstrap.h 文件添加如下代码</p>
+<pre><code>#if !defined(GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS)
+#define GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS 1
+#endif
+</code></pre></li>
+<li><p>生成frameworks<br> 生成不同架构的framework，使用lipo命令合并。</p>
+<p> note：lipo命令如下<br> lipo -info  xxxx/xxx.a        //查看lib 信息<br> lipo -create xxx/xxx_1.a  xxx/xxx_2.a  xxx/xxx_3.a. -output  xxx/xxx_dst.a </p>
+</li>
+<li>创建自己的protobuf数据<br> 6.1 创建proto文件，使用命令vim xxxx.proto创建<br> 6.2 生成OC源文件<pre><code>protoc  --proto_path=proto文件所在路径  —objc_out=产出路径   xxx.proto
+</code></pre></li>
+<li>将生成的OC文件和Protobuf.framework 引入要使用的工程</li>
+</ol>
+<p>笔者Protobuf地址：<a href="https://github.com/LiuToTo/Protobuf.git" target="_blank" rel="external">https://github.com/LiuToTo/Protobuf.git</a><br>笔者Protobuf.framework测试工程地址：<a href="https://github.com/LiuToTo/PBTest.git" target="_blank" rel="external">https://github.com/LiuToTo/PBTest.git</a></p>
 
-从事软件开发工作已经有了些许年月。
-
- 零零散散写过一些东西。
-
- 回头看看，写的东西没有深度。
-
-    想静下心来，学习。分享一些实用的东西。
-
-  自此开篇。。。。
-</code></pre>
   </div>
   <!--评论块-->
     
@@ -134,13 +152,13 @@
 <nav class="post-nav">
   <!-- Prev Nav -->
     
-  <a href="/2017/06/05/iOS编程小结——（起始篇）/" id="post_nav-newer" class="post-nav-content prev-content">
-      新篇
-  </a>
-    
 
 
   <!-- Next Nav -->
+    
+  <a href="/2017/06/05/iOS编程小结——（起始篇）/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
     
 </nav>
 <div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
